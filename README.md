@@ -1,2 +1,2 @@
-# winterview
-Generates random interview questions.
+# Winterview
+A very simple website that generates random interview questions.
