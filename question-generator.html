@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Question Generator</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="icon" type="image/png" href="images/favicon_io/favicon-32x32.png"/>
+    <meta name="viewport" content="width=device-width">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Red+Hat+Display:ital@1&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="headline">Generate a Random Question</div>
+    <p id="question">Click here for a random interview question!</p>
+
+    
+    <script>
+    document.getElementById("question").onclick = function() {clicking()};
+    
+    function clicking() {
+      document.getElementById("question").innerHTML = question_generator();
+    }
+    var count = 0; //first question will always be "tell me..."
+    var questions = [];
+        questions.push("What are your strengths? Weaknesses?");
+        questions.push("Why are you interested in our company?");
+        questions.push("Tell me about a time when you were faced with a problem that had a number of possible solutions. What was the problem and how did you determine the course of action? What was the outcome of that choice?");
+        questions.push("Describe a time when you took the lead on a project.");
+        questions.push("In what type of position do you see yourself in the near future?");
+        questions.push("What do you already know about our company?");
+        questions.push("What does your ideal work environment look like?");
+        questions.push("Give an example of when you failed a goal you had. Why did you fail?  How were you able to learn from it?");
+        questions.push("What is the farthest you have bent your standards in order to succeed? Please explain what happened, what you did, and what was the result?");
+        questions.push("Tell me about your most difficult interaction with someone. Why was it difficult? How did you handle it and what was the outcome?");
+        questions.push("How do you prioritize your projects when you have many?");
+        questions.push("Tell me about a time when you had to change your plans in the middle of your project.");
+        questions.push("What did you do when you needed to motivate a group of individuals during a particular project?");
+        questions.push("Give me an example of when you saw a peer struggling and you decided to step in and help. What happened?");
+        questions.push("Describe the steps of the most challenging project or issue you have had to solve.");
+        questions.push("Describe a time when you had to learn a new technology or aquire new technical skills for your job or a project. How did you prioritize learning while managing the other demands of this task?");
+        questions.push("Describe a time when you exceeded someone's expectations when helping them with a problem. How did you know that you exceeded their expectations?");
+        questions.push("Tell me about a time when a project was not going how you planned.");
+        questions.push("Think about a time when you noticed an inaccuracy or problem with some project that others missed. Describe the issue you identified, how you identified it, and the steps you took to address it.");
+        questions.push("What motivates you at work?");
+        questions.push("Do you have any regrets in regards to your work or school?");
+        questions.push("Is there a project that you are most proud of? What were some challenges you faced while doing this project?");
+        questions.push("How do you handle a difficult relationship with your coworkers or classmates?");
+        questions.push("Walk me through your resume.");
+        questions.push("Describe a time where you worked as a team, and any challenges that came with it.");
+        questions.push("Tell me about a time when you had to adapt to a big change.");
+        questions.push("What do you hope to gain from this position?");
+        questions.push("What skills or experience do you have that can be useful to our company?");
+        questions.push("Tell me about a time when you were juggling many tasks at once. How did you manage your time?");
+        questions.push("How do you respond to feedback? Can you give me an example?");
+        questions.push("Imagine that you are a new member on a well-established team that needs to collaborate effectively. You have a new way of approaching a problem that differs from others, but you know your approach is critical to the success of the project. How do you connect with your new teammates while communicating your unconventional ideas?");
+        questions.push("Tell me about a time when you had to make a high priority decision but did not have all the information you needed to do so.");
+        questions.push("Describe a time where you leveraged an existing or emerging technology to implement an innovative solution towards a problem.");
+        questions.push("How do you stay up to date with the latest technological advancements? Can you gave me an example?");
+        questions.push("If you were a fruit? what fruit would you be and why? (Yes, this is a real question. Don't let these throw you off!)");
+
+    function question_generator(){
+        
+        if (questions.length == 0){
+            return "There are no more questions!";
+        }
+        var randomNum = Math.floor(Math.random()*(questions.length)); //random question
+        
+        if (count == 0){ //if it is the first generated question
+            count+=1;
+            return "Tell me about yourself."
+        }
+
+        var q = questions[randomNum];
+        //remove questions that are already asked
+        questions.splice(randomNum,1);
+        return q;
+    }
+    </script>
+
+
+    <div class="navbar">
+        <a href="index.html">Take Me Home</a>
+        <a href="question-generator.html">Question Generator</a>
+        <a href="about.html">About</a>
+    </div>
+</body>
+
+
+</html>

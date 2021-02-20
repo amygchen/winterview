@@ -1,0 +1,196 @@
+*, html {
+    margin:0px;
+    padding:0;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: rgb(49, 49, 49);
+    
+}
+p {
+    font-family: 'Playfair Display';
+    font-size: 30px;
+    color: white;
+    animation: fade-in-fast 1s;
+    margin-left: 40px;
+    margin-right: 40px;
+    text-align: center;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+
+
+/**** LANDING ****/
+.headline{
+    margin-top: 30px;
+    padding: 30px;
+    font-family: 'Playfair Display', serif;
+    font-size: 100px;
+    color:rgb(248, 248, 248);
+    text-align: center;
+    animation: fade-in-fast 1s;
+}
+.subheadline{
+    padding-bottom: 20px;
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 40px;
+    color:rgb(192, 192, 192);
+    text-align: center;
+    animation: fade-in 2.5s;
+}
+img {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    animation: fade-in-fast 1s;
+    max-width: 100%;
+    height: 200px;
+}
+/********/
+
+/**** BUTTONS ****/
+.button{
+    display: block;
+    margin:30px;
+    text-align: center;
+    animation: fade-in 2.5s;
+}
+.button1{
+    color: white;
+    background-color: rgb(48, 110, 48);
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 45px;
+    padding: 10px 20px 10px 20px;
+    margin: 25px;
+}
+.button2{
+    color:white;
+    background-color: rgb(129, 36, 36);
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 45px;
+    padding: 10px 20px 10px 20px;
+    margin: 25px;
+}
+.button1:hover {
+    background-color: rgb(52, 170, 52);
+    transition: 0.2s;
+    opacity: 1;
+}
+.button2:hover{
+    background-color: rgb(192, 32, 32);
+    transition: 0.2s;
+    opacity: 1;
+}
+/********/
+
+/**** NAV BAR ****/
+.navbar {
+    overflow: hidden;
+    background-color: rgb(44, 44, 44);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+.navbar a {
+    float: left;
+    color: white;
+    text-align: center;
+    padding: 10px 20px;
+    font-size: 20px;
+    opacity: 0.7;
+}
+.navbar a:hover {
+    background-color: rgb(24, 24, 24);
+    transition: 0.2s;
+}
+/********/
+
+/**** QUESTION GENERATOR ****/
+  #question{
+      text-align: center;
+      padding: 50px;
+      color: white;
+      margin: 25px;
+      animation: fade-in 2s;
+      font-size: 55px;
+      font-family: 'Courier New', Courier, monospace;
+      height: 50%;
+  }
+
+  #question:hover {
+      background-color: rgb(66, 66, 66);
+      transition:0.1s;
+  }
+
+/********/
+
+.icon {
+    text-align: center;
+    margin: 10px;
+    animation: fade-in-fast 1s;;
+}
+
+/**** ANIMATIONS ****/
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes fade-in-fast {
+    0% {
+        opacity: 0;
+    }
+    30% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/**** ATTEMPT AT RESPONSIVENESS ****/
+@media only screen and (max-width: 700px) {
+    .headline{
+      text-align: left;
+      font-size: 65px;
+    }
+    .subheadline {
+        text-align: left;
+        font-size: 55px;
+        margin-left: 20px;
+    }
+    .button {
+        display: inline-table;
+        text-align: left;
+        margin: 0;
+    }
+    img {
+        margin-left: 0;
+    }
+    body {
+        padding-bottom: 200px;
+        
+    }
+    #question {
+        font-size: 25px;
+        text-align: left;
+    }
+    p {
+        margin-left: 20px;
+        text-align: left;
+    }
+  }
+  /********/
+
+
+
+  
